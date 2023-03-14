@@ -8,7 +8,7 @@
 ```
 # eggbask
 
-A python script to organise all your cool emulation stuff
+A python app to organise all your cool emulation stuff
 
 ![](https://github.com/Potat0SSack/eggbask/blob/main/showcase.gif)
 
