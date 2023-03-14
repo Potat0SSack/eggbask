@@ -30,7 +30,11 @@ More features will be added in the future.
 ___
 
 # Installation
-Open your terminal and run
+
+First make sure you have downloaded click for python by running `pip install click`
+if you didn't have it pip will install click as well as any otherr dependencies
+
+After than open your terminal and run
 ```
   git clone https://github.com/Potat0SSack/eggbask
   cd eggbask
