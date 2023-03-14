@@ -2,6 +2,7 @@ import click
 
 from commands.add import add as add
 from commands.run import run as run
+from commands.config import config as config
 
 @click.group()
 def entry_point():
@@ -9,6 +10,7 @@ def entry_point():
 
 entry_point.add_command(add)
 entry_point.add_command(run)
+entry_point.add_command(config)
 
 
 if __name__ == '__main__':
