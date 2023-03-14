@@ -48,4 +48,4 @@ Another option is to just download the latest release.
 After you do open it and extract the "eggbask" directory to your prefered location, open command line in the directory and run
 `python eggbask.py`
 
-After you run the last command you should get a --help list with all of the commands.
+After you run the script you should get a --help list with all of the commands.
