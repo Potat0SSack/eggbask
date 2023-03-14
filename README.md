@@ -33,11 +33,19 @@ ___
 
 First make sure you have downloaded click for python by running `pip install click`, if you didn't have it pip will install click as well as any other dependencies for it.
 
+## Option 1: git
 After than open your terminal and run
 ```
   git clone https://github.com/Potat0SSack/eggbask
   cd eggbask
   python eggbask.py
 ```
+
+After you run the last command you should get a --help list with all of the commands.
+
+## Option 2: downloading release
+Another option is to just download the latest release.
+After you do open it and extract the "eggbask" directory to your prefered location, open command line in the directory and run
+`python eggbask.py`
 
 After you run the last command you should get a --help list with all of the commands.
