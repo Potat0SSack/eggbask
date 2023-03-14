@@ -101,7 +101,7 @@ def port():
             bold=True)
 
 
-@run.command('runrom')
+@run.command('rom')
 def rom():
     """Run a ROM file using an added emulator"""
 
