@@ -17,4 +17,4 @@ ___
 # Installation
 Make a folder somewhere, name it whatever and drop the script in there. Why have a seperate folder? Cause the script makes it's own folders and idk just don't forget about the folder it creates otherwise put it wherever you want.
 
-After that just run the script in a terminal, it should print out an automatic help list with all commands listed. From there just add an emulator via `addemu`, optionally add a rom folder for convinience via `addromfolder` and finally, run the roms you want via `runrom`. Have fun!
+After that just run the script in a terminal, it should print out an automatic help list with all commands listed. From there just add an emulator via `add emu`, optionally add a rom folder for convinience via `add romfolder` and finally, run the roms you want via `run rom`. Have fun!
