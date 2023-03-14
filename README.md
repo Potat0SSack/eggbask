@@ -31,8 +31,7 @@ ___
 
 # Installation
 
-First make sure you have downloaded click for python by running `pip install click`
-if you didn't have it pip will install click as well as any otherr dependencies
+First make sure you have downloaded click for python by running `pip install click`, if you didn't have it pip will install click as well as any other dependencies for it.
 
 After than open your terminal and run
 ```
