@@ -25,7 +25,7 @@ def emu():
 
     if len(configs_grabbed) == 0:
         click.secho(
-            "Error: Profiles directory has no emulator profiles, make one using 'addemu' command and try again.",
+            "Error: Profiles directory has no emulator profiles, make one using 'add emu' command and try again.",
             bg="red",
             bold=True)
         sys.exit()
@@ -52,7 +52,7 @@ def emu():
 
     except configparser.NoSectionError:
         click.secho(
-            "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'addemu'.",
+            "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'add emu'.",
             bg="red",
             bold=True)
 
@@ -69,7 +69,7 @@ def port():
 
     if len(configs_grabbed) == 0:
         click.secho(
-            "Error: Ports directory has no port profiles, make one using 'addport' command and try again.",
+            "Error: Ports directory has no port profiles, make one using 'add port' command and try again.",
             bg="red",
             bold=True)
         sys.exit()
@@ -205,7 +205,7 @@ def rom():
 
         if len(configs_grabbed) == 0:
             click.secho(
-                "Error: Profiles directory has no emulator profiles, make one using 'addemu' command and try again.",
+                "Error: Profiles directory has no emulator profiles, make one using 'add emu' command and try again.",
                 bg="red",
                 bold=True)
             sys.exit()
@@ -260,7 +260,7 @@ def rom():
 
                 except configparser.NoSectionError:
                     click.secho(
-                        "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'addemu'.",
+                        "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'add emu'.",
                         bg="red",
                         bold=True)
 
@@ -284,13 +284,13 @@ def rom():
 
                 except configparser.NoSectionError:
                     click.secho(
-                        "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'addemu'.",
+                        "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'add emu'.",
                         bg="red",
                         bold=True)
 
     except FileNotFoundError:
         click.secho(
-            "Error: eggbask did not find a single profile in the 'profiles' directory! Please create one using 'addemu'.",
+            "Error: eggbask did not find a single profile in the 'profiles' directory! Please create one using 'add emu'.",
             bg="red",
             bold=True)
     """Run a ROM file using an added emulator"""
@@ -395,7 +395,7 @@ def rom():
 
         if len(configs_grabbed) == 0:
             click.secho(
-                "Error: Profiles directory has no emulator profiles, make one using 'addemu' command and try again.",
+                "Error: Profiles directory has no emulator profiles, make one using 'add emu' command and try again.",
                 bg="red",
                 bold=True)
             sys.exit()
@@ -447,7 +447,7 @@ def rom():
 
                 except configparser.NoSectionError:
                     click.secho(
-                        "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'addemu'.",
+                        "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'add emu'.",
                         bg="red",
                         bold=True)
 
@@ -471,12 +471,12 @@ def rom():
 
                 except configparser.NoSectionError:
                     click.secho(
-                        "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'addemu'.",
+                        "Error: Given .ini file does not contain [EmuInfo] section, your emulator profile may be incorrectly formated, regenerate it via 'add emu'.",
                         bg="red",
                         bold=True)
 
     except FileNotFoundError:
         click.secho(
-            "Error: eggbask did not find a single profile in the 'profiles' directory! Please create one using 'addemu'.",
+            "Error: eggbask did not find a single profile in the 'profiles' directory! Please create one using 'add emu'.",
             bg="red",
             bold=True)
