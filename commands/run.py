@@ -237,7 +237,10 @@ def rom():
                 try:
                     emu = configparser.ConfigParser()
                     emu.read_file(open("./profiles/" + selection))
-                    emu.set("Extensions", "supported", file_extension)
+                    extension_file = open("./profiles/" + selection, 'r')
+                    data = extension_file.read()
+                    extension_number = data.count('extension') + 1
+                    emu.set("Extensions", "supported" + str(extension_number), file_extension)
 
                     click.echo("Adding extension to config...")
                     with open("./profiles/" + selection, "w") as profile_file:
