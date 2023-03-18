@@ -6,6 +6,9 @@
  |_____\__, |\__, |____/ \__,_|___/_|\_\
        |___/ |___/
 ```
+![release](https://badgen.net/github/release/Potat0SSack/eggbask) ![license](https://badgen.net/github/license/Potat0SSack/eggbask)
+![pythonver](https://badgen.net/badge/Python/3.11)
+
 # eggbask
 
 A python app to organise all your cool emulation stuff
