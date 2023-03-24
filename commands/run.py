@@ -169,42 +169,18 @@ def rom():
 
             for count, value in enumerate(roms_grabbed, start=1):
                 click.echo('{} - {}'.format(count, value))
-
-        #a = False
-        #while a is False:
-        #    rom = click.prompt(
-        #        "\nPlease type in the path to desired ROM including extension")
-        #    if os.path.isfile(rom_location + "/" + rom) is False:
-        #        click.secho(
-        #            "Error: Given ROM is not found.",
-        #            bg="red",
-        #            bold=True)
-        #    else:
-        #        userom = rom_location + "/" + rom
-        #        a = True
-        #
         
         while True:
                 try:
-                    choice = click.prompt("\nSelect your desired rom (number or name + .extension)")
-                    
-                    if choice.isdigit():
-                        choice = int(choice)
-                        userom = rom_location + "/" + roms_grabbed[choice - 1]
+                    choice = click.prompt("\nSelect your desired rom (full path + name + .extension)")
+
+                    if os.path.isfile(choice) is False:
+                        click.echo("Invalid filename, please try again.")
+                        continue
                         
-                        path = pathlib.Path('./profiles')
-                        file_extension = pathlib.Path(roms_grabbed[choice - 1]).suffix
-                        click.echo(file_extension)
-                        
-                    else:
-                        if os.path.isfile(rom_location + "/" + choice) is False:
-                            click.echo("Invalid filename, please try again.")
-                            continue
-                        userom = rom_location + "/" + choice
-                        
-                        path = pathlib.Path('./profiles')
-                        file_extension = pathlib.Path(userom).suffix
-                        click.echo(file_extension)
+                    path = pathlib.Path('./profiles')
+                    file_extension = pathlib.Path(choice).suffix
+                    click.echo(file_extension)
                         
                 except IndexError:
                     click.echo("Invalid value, please try again.")
@@ -232,7 +208,7 @@ def rom():
                             "Valid emulator config for " +
                             str(file_extension) +
                             " found! Launching " +
-                            str(rom) +
+                            str(choice) +
                             " using " +
                             cur_path +
                             "...",
@@ -242,7 +218,7 @@ def rom():
                         emu.read_file(open(cur_path))
                         location = emu.get("EmuInfo", "executable")
 
-                        subprocess.call([location, userom])
+                        subprocess.call([location, choice])
                         sys.exit()
                     else:
                         click.echo(
@@ -316,12 +292,12 @@ def rom():
                 location = emu.get("EmuInfo", "executable")
                 click.secho(
                     "Running " +
-                    str(rom) +
+                    str(choice) +
                     " with " +
                     location +
                     "...",
                     bg="blue")
-                subprocess.call([location, userom])
+                subprocess.call([location, choice])
                 sys.exit()
 
             except configparser.NoSectionError:
@@ -339,12 +315,12 @@ def rom():
                 location = emu.get("EmuInfo", "executable")
                 click.secho(
                     "Running " +
-                    rom +
+                    choice +
                     " with " +
                     location +
                     "...",
                     bg="blue")
-                subprocess.call([location, userom])
+                subprocess.call([location, choice])
                 sys.exit()
 
             except configparser.NoSectionError:
